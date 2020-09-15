@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sailing.oracle.mapper.TableInfoMapper">
+    <select id="getTableInfo" resultType="com.sailing.oracle.entity.TableInfo">
+        select a.TABLE_NAME tableName, b.COMMENTS tableComments from user_tables a,user_tab_comments b WHERE a.TABLE_NAME=b.TABLE_NAME order by tableName
+    </select>
+</mapper>
